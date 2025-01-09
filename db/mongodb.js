@@ -8,5 +8,3 @@ async function connectDb({ host, port, dbName}) {
 }
 
 module.exports = connectDb;
-
-

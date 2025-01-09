@@ -71,4 +71,3 @@ async function deleteCursos(req, res){
 }
 
 module.exports = {addCurso, getCursos, findCursos, updateCursos, deleteCursos};
-
