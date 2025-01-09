@@ -16,9 +16,9 @@ app.use('/public', express.static(`${__dirname}/storage/imgs`));
 
 app.use(session({
     secret: `${appConfig.secret}`,
-    resave: false,  //evita guardar en la sesión si no se ha actualizado
+    resave: false,  
     cookie: {expires: new Date (Date.now()  + 7 * 24 * 60 * 60 * 1000 )},
-    saveUninitialized: false,   //guarda una cookie sin valor inicial
+    saveUninitialized: false,
 }));
 
 app.use('/v1', cursosRoutes);
