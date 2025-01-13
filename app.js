@@ -5,6 +5,7 @@ const bodyParser =require('body-parser');
 const cors = require('cors');
 
 const cursosRoutes = require('./routes/cursos');
+const authRoutes = require('./routes/authRoutes');
 
 const {appConfig} = require('./config');
 
@@ -22,6 +23,7 @@ app.use(session({
 }));
 
 app.use('/v1', cursosRoutes);
+app.use('/auth', authRoutes);
 
 
 module.exports = app;
