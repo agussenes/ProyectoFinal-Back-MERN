@@ -1,0 +1,21 @@
+const express = require('express');
+const api = express.Router();
+const upload = require('../libs/storage'); // Middleware para manejo de imágenes
+
+// Importar controladores de productos
+const { 
+    addProducto, 
+    getProductos, 
+    findProducto, 
+    updateProducto, 
+    deleteProducto 
+} = require('../controllers/productosController');
+
+// Definición de rutas para productos
+api.get('/productos', getProductos); // Obtener todos los productos
+api.post('/productos', upload.single('imagen'), addProducto); // Crear un nuevo producto
+api.get('/productos/:id', findProducto); // Obtener un producto por su ID
+api.put('/productos/:id', upload.single('imagen'), updateProducto); // Actualizar un producto por su ID
+api.delete('/productos/:id', deleteProducto); // Eliminar un producto por su ID
+
+module.exports = api;
