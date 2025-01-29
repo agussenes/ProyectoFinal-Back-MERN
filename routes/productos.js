@@ -1,9 +1,9 @@
 const express = require('express');
 const api = express.Router();
-const upload = require('../libs/storage'); // Middleware para manejo de imágenes
+const upload = require('../libs/storage'); 
 const authenticateToken = require('../middlewares/authenticateToken');
 
-// Importar controladores de produtos e carrinho
+
 const { 
     addProducto, 
     getProductos, 

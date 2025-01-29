@@ -8,7 +8,7 @@ const contactoSchema = new mongoose.Schema({
   dataCriacao: { type: Date, default: Date.now },
 });
 
-// Forçar o uso da collection "contactos"
+
 const Contacto = mongoose.model('Contacto', contactoSchema, 'contactos');
 
 module.exports = Contacto;

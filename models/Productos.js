@@ -10,7 +10,7 @@ const productoSchema = new mongoose.Schema(
         imagen: { type: String } // Puede no ser obligatorio si no siempre hay imágenes
     },
     {
-        timestamps: true // Para incluir createdAt y updatedAt automáticamente
+        timestamps: true 
     }
 );
 

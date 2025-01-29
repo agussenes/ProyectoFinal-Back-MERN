@@ -11,7 +11,7 @@ const cartSchema = new mongoose.Schema(
     ],
   },
   {
-    timestamps: true, // Para createdAt e updatedAt automáticos
+    timestamps: true, 
   }
 );
 
